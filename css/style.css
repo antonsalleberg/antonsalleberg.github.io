@@ -1,0 +1,234 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+
+:root {
+    --main-color:#0F5C34;
+    --secundary-color:#000;
+    --third-color:#fff;
+    --fourth-color: #498F63;
+}
+
+/* omvandlinga från rem till px */
+html { font-size: 62.5%; } 
+body { font-size: 1.4rem; } /* =14px */
+h1   { font-size: 2.4rem; } /* =24px */
+
+body{
+    overflow-x: hidden;
+    height: 100vh;
+    display:grid;
+    font-family:"League Gothic" , sans-serif ;
+    grid-template-columns:repeat(5, 1fr) ;
+    grid-template-rows: 21.5rem 1fr 14rem;
+    grid-template-areas: 
+    "header header header header header"
+    "main main main main main"
+    "footer footer footer footer footer";
+}
+
+header{
+    grid-area: header;
+}
+
+main{
+    grid-area: main;
+}
+
+footer{
+    grid-area: footer;
+}
+
+
+.navbar{
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color:var(--secundary-color);
+    border:var(--main-color) solid 2rem;
+    
+}
+
+.navbar > div > ul{
+    display:flex;
+    list-style-type: none;
+    justify-content: space-between;
+    padding: 0 7rem;
+}
+
+.navbar a{
+    text-decoration: none;
+    color:var(--third-color);
+    margin: 1rem;
+    margin-top: 1rem;
+    margin-right:6rem;
+    font-size: 2.5rem;
+    letter-spacing: 0.2rem;
+  
+}
+
+.navbar-img img{
+    background:url(/img/Fasader-1024x723\ .png) center no-repeat;
+    height: 7rem;
+    background-size:cover;
+    position: relative;
+    background: darken;
+    
+   
+}
+
+.navbar-img{
+    position: relative;
+}
+
+.navbar-img a{
+    position: absolute;
+    left:50%;
+    top:50%;
+    color: var(--third-color);
+    font-size: 4rem;
+    transform: translate(-50%,-50%);
+    z-index:99999;
+    text-shadow: 2px 2px 1px var(--secundary-color);
+
+}
+
+
+.navbar-btn{
+    display:inline-block;
+    padding:1rem 2rem;
+    background-color:var(--main-color);
+    color:var(--third-color);
+    text-decoration: none;
+    border-radius: 4rem;
+    white-space: nowrap;
+}
+/*dropdown*/
+.dropdown{
+    position: relative;
+    
+    
+}
+
+.dropdown-content{
+    position: absolute;
+    z-index: 999999;
+    background-color: var(--main-color);
+    display:flex;
+    flex-direction: column;
+    opacity: 0;
+    visibility: hidden;
+    transition: 0.2s ease;
+    list-style-type: none;
+    border: var(--secundary-color) solid 0.2rem;
+    box-shadow: 6px 4px 15px 5px var(--secundary-color);
+    text-shadow: 1px 1px 1px var(--secundary-color);
+    white-space: nowrap;
+}
+
+
+.dropdown:hover .dropdown-content{
+    opacity: 1;
+    visibility: visible;
+    transition: 0.2s ease;
+}
+/*pil*/
+.dropdown::after{
+    content:"";
+    position:absolute;
+    right:4rem;
+    top:45%;
+    transform:translate(0%y);
+    width: 0px;
+    height: 0px;
+    border-left: 0.8rem solid transparent;
+    border-right: 0.8rem solid transparent;
+    border-bottom: 1rem solid var(--fourth-color);
+    transition: all 0.2s ease;
+
+}
+
+.dropdown:hover::after{
+    transform:rotate(180deg) translateY(0%);
+    transition: all 0.2s ease;
+}
+
+.card-container{
+    display:flex;
+    max-width: 90%;
+    margin: 3rem auto;
+    flex-wrap:wrap;
+}
+
+.card{
+    margin: 10px;
+    display:flex;
+    flex-direction: column;
+    flex: 1 1 29%;
+    border-radius: 15px;
+    overflow:hidden;
+    box-shadow: 0px 3px 6px 2px rgba(0,0,0,0.64);
+    position: relative;
+    height:18rem;
+}
+
+.card-img{
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100%;
+    background-position: 50% 50%;    
+}
+
+.card-img-1{
+    background-image:url(/img/bjertorp_2_s.jpeg);
+}
+.card-img-2{
+    background-image:url(/img/bardisk.jpeg);
+}
+.card-img-3{
+    background-image:url(/img/bardisk.jpeg);
+}
+
+.card-img  > a{
+    position: absolute;
+    width:100%;
+    height: 100%;
+    z-index: 999;
+}
+.img-headline{
+    position: absolute;
+    top:50%;
+    left:50%;
+    transform: translate(-50%,-50%);
+    color: var(--third-color);
+    text-decoration: none;
+    text-shadow: 3px 3px 3px var(--secundary-color);
+    font-size: 5rem;
+    text-align: center;
+    margin-top:10px;
+}
+
+/*Text över bild
+
+.test{
+    background: url no-repeat center;
+    height: ..rem;
+    background-size:cover;
+    aspect-ratio:1;
+    position: relative;
+    background:darken;
+}
+
+.test1{
+   position: absolute;
+   top:50%,
+   left:50%;
+   transform: translate(-50%,-50%)
+   z-index:99999;
+
+}
+*/
+
+
