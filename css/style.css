@@ -22,7 +22,7 @@ body{
     display:grid;
     font-family:"League Gothic" , sans-serif ;
     grid-template-columns:repeat(5, 1fr) ;
-    grid-template-rows: 21.5rem 1fr 14rem;
+    grid-template-rows: auto 1fr auto;
     grid-template-areas: 
     "header header header header header"
     "main main main main main"
@@ -35,10 +35,17 @@ header{
 
 main{
     grid-area: main;
+    /*background-color: var(--fourth-color);*/
+    /*background-image: url(/img/forest-gf0886727a_1920.jpg);*/
+
 }
 
 footer{
     grid-area: footer;
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: var(--secundary-color);
 }
 
 
@@ -70,11 +77,11 @@ footer{
 }
 
 .navbar-img img{
-    background:url(/img/Fasader-1024x723\ .png) center no-repeat;
+    background: url(/img/Fasader-1024x723\.png) center no-repeat;
     height: 7rem;
     background-size:cover;
     position: relative;
-    background: darken;
+    background-blend-mode: darken;
     
    
 }
@@ -140,7 +147,6 @@ footer{
     position:absolute;
     right:4rem;
     top:45%;
-    transform:translate(0%y);
     width: 0px;
     height: 0px;
     border-left: 0.8rem solid transparent;
@@ -151,8 +157,74 @@ footer{
 }
 
 .dropdown:hover::after{
-    transform:rotate(180deg) translateY(0%);
+    transform:rotate(180deg);
     transition: all 0.2s ease;
+}
+
+.Boking-system {
+    background: var(--fourth-color);
+	
+	border: 1px solid rgba(60, 64, 101, 0.1);
+}
+
+.boking-header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+	height: 5rem;
+	line-height: 110px;
+	text-align: center;
+}
+
+.boking-header h2{
+    height: 6rem;
+    margin-bottom: 3rem;
+    color: var(--main-color);
+    font-size: 3rem;
+    
+}
+
+.types label{
+
+position: absolute;
+
+}
+
+.boking-text h3{
+    color: var(--main-color);
+	display: flex;
+	height: 30px;
+	line-height: 30px;
+	font-size: 3rem;
+    
+}
+
+.types {
+    display: flex;
+    justify-content:space-between;
+    margin: 0 10rem;
+    height:4rem;
+}
+
+.types div{
+    flex: 1 1 auto;
+    position: relative;
+}
+
+.boking-btn a{
+    display: flex;
+    justify-content: center;
+    font-size: 3rem;
+    text-decoration: none;
+    color:var(--main-color);
+    background-color:var(--secundary-color);
+    margin:3rem 60rem;
+    border-radius: 2rem;
+    box-shadow:  5px 5px 15px 5px rgba(0,0,0,0.46)
+
+
+
 }
 
 .card-container{
@@ -160,6 +232,13 @@ footer{
     max-width: 90%;
     margin: 3rem auto;
     flex-wrap:wrap;
+}
+
+
+
+.first-side-img{
+    width:100%;
+    margin-top:2rem;
 }
 
 .card{
@@ -172,6 +251,16 @@ footer{
     box-shadow: 0px 3px 6px 2px rgba(0,0,0,0.64);
     position: relative;
     height:18rem;
+}
+
+.big {
+    flex: 1 1 90%;
+    height: 30rem;
+}
+
+.middle {
+    flex: 1 1 45%;
+    height: 23rem;
 }
 
 .card-img{
@@ -188,7 +277,19 @@ footer{
     background-image:url(/img/bardisk.jpeg);
 }
 .card-img-3{
-    background-image:url(/img/bardisk.jpeg);
+    background-image:url(/img/to-go-biking-g917e452ab_1920.jpg);
+}
+
+.card-img-4{
+    background-image: url(/img/restaurant-ga8ac36afe_1920.jpg);
+}
+
+.card-img-5{
+    background-image: url(/img/pool-g8532f8ed0_1920.jpg);
+}
+
+.card-img-6{
+    background-image: url(/img/audience-gdba5838ad_1920.jpg);
 }
 
 .card-img  > a{
@@ -209,6 +310,100 @@ footer{
     text-align: center;
     margin-top:10px;
 }
+
+.Line {
+    background-image: url(../img/zigzag-rund.svg);
+    font-size: 1.6rem;
+    text-transform: uppercase;
+    letter-spacing: 0.2rem;
+    position: relative;
+    margin-bottom:2rem;
+    margin-top:2rem;
+    height: 1rem;
+    width:100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.Line-img {
+    position:absolute;
+    height:2rem;
+    top: 0.7rem;
+    right: 0;
+    width: 100%;
+    z-index: 2; 
+    
+
+}
+.Line-headline {
+    z-index: 10;
+    display: inline-block;
+    position: relative;
+    max-width: 100%;
+    font-weight: bold;
+    font-size: 3rem;
+    background-color: var(--third-color);
+}
+
+footer > *{
+    margin-top: 3rem;
+}
+
+.footer-content a{
+   text-decoration: none;
+   color: var(--third-color);
+   font-size: 2rem;
+   margin: 0 1rem;
+   letter-spacing: 0.1rem;
+}
+
+.footer-icons a{
+    color:var(--secundary-color);
+    font-size: 3rem;
+    text-decoration: none;
+    margin:1rem;
+    border-radius: 50%;
+    display: inline-block;
+    position: relative;
+    width:6rem;
+    height:6rem;
+    background-color: var(--main-color);  
+}
+
+.footer-icons a i{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    transition: all .2s ease-in-out;
+}
+
+.footer-icons a i:after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 60px;
+    height: 60px;
+    line-height: 60px;
+    border-radius: 50%;
+    opacity: 0;
+    box-shadow: 0 0 0 1px #fff;
+    transition: all .2s ease-in-out;
+}
+
+.footer-icons a i:hover:after {
+    opacity: 1;  
+    transform: scale(1.12);
+    transition-timing-function: cubic-bezier(0.37,0.74,0.15,1.65);
+}
+
+.footer-icons :hover{
+    color:var(--third-color)
+}
+
+
+
 
 /*Text över bild
 

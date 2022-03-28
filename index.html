@@ -9,13 +9,14 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link href="https://fonts.googleapis.com/css2?family=League+Gothic&family=Source+Serif+4:wght@300&display=swap" rel="stylesheet">
         <link rel="stylesheet" href="/css/style.css" type="text/css">
+        <script src="https://kit.fontawesome.com/4039f99621.js" crossorigin="anonymous"></script>
     </head>
     <body>
         <header>
             <nav>
                 <div class="navbar">
                     <div class="navbar-img">
-                        <img src="img/Fasader-1024x723 .png" alt="logga">
+                        <img src="img/Fasader-1024x723.png" alt="logga">
                         <a class="img-text" href="#">Schlättahotellet</a>
                     </div>
                     <div class="Nav-text">
@@ -23,9 +24,8 @@
                         <li class="dropdown"><a href="#">Hotell</a>
                             <ul class="dropdown-content">
                                 <li><a href="#">Om oss</a></li>
-                                <li><a href="#">Resturang
+                                <li><a href="#">Resturang</a></li>
                                 <li><a href="#">Aktiviteter</a></li>
-                                </a></li>
                             </ul>
                         </li>
                         <li class="dropdown"><a href="#">Boka</a>
@@ -49,29 +49,113 @@
                 </div>
             </nav> 
         </header>
-        <script src="" async defer></script>
+        <script src="#" async defer></script>
         <main>
+            <div class="first-side">
+                <img class="first-side-img" alt="#" src="/img/Fasader-1024x723.png">
+            </div>
+            <div class="Boking-system">
+                <div class="boking-header">
+                    <h2>Boka Här!</h2>
+                </div>
+                
+                <div class="types">
+                    <div>
+                        <label for="ankomst">Ankomst</label>
+                        <input id="ankomst" name="ankomst" type="date">
+                    </div>
+                    <div>
+                        <label for="avresa" >Avresa</label>
+                        <input id="avresa" name="avresa" type="date">
+                    </div>
+                    <div>
+                        <label for="vuxan" >Vuxna</label>
+                        <input id="vuxna" name="vuxna" type="number" placeholder="1" min="1" required>
+                    </div>
+                    <div>
+                        <label for="barn" >Barn</label>
+                        <input id="barn" name="barn" type="number" placeholder="1">
+                    </div>
+                </div>
+                <div class="boking-btn">
+                    <a href="#">Kolla Tillgänglighet</a>
+                </div>
+            </div>
+            <div class="Line">
+                
+            </div>
             <div class="card-container">
                 <div class="card">
                     <div class="card-img card-img-1">
                         <a href="#"></a>
-                        <p class="img-headline" href="#">Om oss</p>
+                        <p class="img-headline">Om oss</p>
                     </div>
                 </div>
                 <div class="card">
                     <div class="card-img card-img-2">
                         <a href="#"></a>
-                        <p class="img-headline" href="#">Resturang</p>
+                        <p class="img-headline">Resturang</p>
                     </div>
                 </div>
                 <div class="card">
                     <div class="card-img card-img-3">
                         <a href="#"></a>
-                        <p class="img-headline" href="#">Aktiviteter</p>
+                        <p class="img-headline">Aktiviteter</p>
+                    </div>
+                </div>
+                <div class="Line">
+                    <p class="Line-headline">På hotellet</p>
+                </div>
+                <div class="card big">
+                    <div class="card-img card-img-4">
+                        <a href="#"></a>
+                        <p class="img-headline">Evengemang</p>
+                    </div>
+                </div>
+                <div class="Line">
+               
+                    <p class="Line-headline">Aktivitet</p>
+                </div>
+                <div class="card middle">
+                    <div class="card-img card-img-5">
+                        <a href="#"></a>
+                        <p class="img-headline">Bad</p>
+                    </div>
+                </div>
+                <div class="card middle">
+                    <div class="card-img card-img-6">
+                        <a href="#"></a>
+                        <p class="img-headline">Konserter</p>
                     </div>
                 </div>
             </div>
         </main>
+        <footer>
+            <div class="footer-icons">
+                <a href="#">
+                    <i class="fa fa-brands fa-facebook"></i>
+                </a>
+                <a href="#">
+                    <i class="fa-brands fa-instagram"></i>
+                </a>
+                <a href="#">
+                    <i class="fa-brands fa-twitter"></i>
+                </a>
+            </div>
+            <div class="footer-content">
+                <a href="#">Om Oss</a>
+                <a href="#">Kontakta oss</a>
+                <a href="#">Vara Badhus</a>
+                <a href="#">Vara Konserthus</a>
+                <a href="#">Jobb</a>
+            </div>
+            <div class="footer-logga">
+                <a href="index.html">
+                    <img alt="#" src="/img/Fasader-1024x723.png">
+                </a>
+            </div>
+
+        </footer>
     </body>
 </html>
 
